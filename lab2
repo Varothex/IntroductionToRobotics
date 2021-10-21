@@ -29,6 +29,7 @@ void loop()
   Serial.println(elapsedTime);
 }
 
+
 //  Luminozitate LED
 const int ledPin = 11;
 
