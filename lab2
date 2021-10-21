@@ -29,7 +29,7 @@ void loop()
   Serial.println(elapsedTime);
 }
 
-//	Luminozitate LED
+//  Luminozitate LED
 const int ledPin = 11;
 
 int brightness = 0;
@@ -55,7 +55,7 @@ void loop()
 }
 
 
-//	LED cu Potentiometru
+//  LED cu Potentiometru
 const int ledPin = 11;
 const int potPin = A0;
 
