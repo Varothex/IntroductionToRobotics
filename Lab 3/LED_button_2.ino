@@ -17,7 +17,7 @@ void setup()
 void loop() 
 {
   buttonState = digitalRead(pushButton);
-  if (buttonState == LOW and lastButtonState == HIGH)
+  if (buttonState != lastButtonState and buttonState == LOW)
   {
     ledState = !ledState;
     digitalWrite(ledPin, ledState);
