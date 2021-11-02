@@ -14,6 +14,6 @@ My repository with all the code from my homework and projects from my university
 ![signal-2021-10-26-224011_001](https://user-images.githubusercontent.com/61534490/138949855-a489288b-ceac-45ae-8cb0-a0de0ee7be67.jpeg)
 
   - <details>
-  <summary>Homework 2</summary>
-  </details>
+    <summary>Homework 2</summary>
+    </details>
 
