@@ -20,5 +20,11 @@ My repository with all the code from my homework and projects from my university
 
   - <details>
     <summary>Homework 2</summary>
+    <ol>
+      <li> Code: <a href="/Homework/Homework_2.ino">Homework_2.ino</a></li>
+      <li> Technical Task: </li>
+      <li> Coding task: </li>
+      <li> Video: </li>
+    </ol>
     </details>
 
