@@ -18,5 +18,8 @@ My repository with all the code from my homework and projects from my university
 
   - <details>
     <summary>Homework 2</summary>
+    <ol>
+      <li>test</li>
+    </ol>
     </details>
 
