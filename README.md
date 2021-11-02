@@ -3,6 +3,7 @@ My repository with all the code from my homework and projects from my university
 
 - Lab
   - [Lab 2](/Lab%202)
+  - [Lab 3](/Lab%203)
 - Homework 
   - <details>
     <summary>Homework 1</summary>
