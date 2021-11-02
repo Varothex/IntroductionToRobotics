@@ -20,6 +20,8 @@ My repository with all the code from my homework and projects from my university
     <summary>Homework 2</summary>
     <ol>
       <li>test</li>
+      <li>test</li>
+      <li>test</li>
     </ol>
     </details>
 
