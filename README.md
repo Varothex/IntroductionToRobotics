@@ -28,6 +28,6 @@ My repository with all the code from my homework and projects from my university
     </ol>
   
     ![signal-2021-11-03-232115_001](https://user-images.githubusercontent.com/61534490/140195230-48a50108-2552-40d6-98bb-9c022f5307b9.jpeg)
-    ![signal-2021-11-03-232115_002](https://user-images.githubusercontent.com/61534490/140195261-ca545d3e-be64-4c62-aa1e-cd432ebdd04b.jpeg)
+    ![signal-2021-11-03-232115_002](https://user-images.githubusercontent.com/61534490/140195446-c2c7a526-4653-48e8-9d5e-be4b0842340c.jpeg)
     </details>
 
