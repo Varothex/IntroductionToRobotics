@@ -24,7 +24,10 @@ My repository with all the code from my homework and projects from my university
       <li> <b>Code:</b> <a href="/Homework/Homework_2.ino">Homework_2.ino</a></li>
       <li> <b>Technical Task:</b> Building the traffic lights for a crosswalk. You will use 2 LEDs to represent the traffic lights for people (red and green) and 3 LEDs to represent the traffic lights for cars (red, yellow and green).</li>
       <li> <b>Coding task:</b> The system has the following states: State 1 (default, reinstated after state 4 ends): green light for cars, red light for people, no sounds. Duration: indefinite, changed by pressing the button. State 2 (initiated by counting down 10 seconds after a button press): the light should be yellow for cars, red for people and no sounds. Duration: 3 seconds. State 3 (iniated after state 2 ends): red for cars, green for people and a beeping sound from the buzzer at a constant interval. Duration: 10 seconds. State 4 (initiated after state 3 ends): red for cars, blinking green for people and a beeping sound from the buzzer, at a constant interval, faster than the beeping in state 3. This state should last 5 seconds. Be careful: pressing the button in any state other than state 1 should NOT yield any actions.</li>
-      <li> <b>Video:</b> </li>
+      <li> <b>Video:</b> https://youtu.be/99ff-oNFGz4</li>
     </ol>
+  
+    ![signal-2021-11-03-232115_001](https://user-images.githubusercontent.com/61534490/140195230-48a50108-2552-40d6-98bb-9c022f5307b9.jpeg)
+    ![signal-2021-11-03-232115_002](https://user-images.githubusercontent.com/61534490/140195261-ca545d3e-be64-4c62-aa1e-cd432ebdd04b.jpeg)
     </details>
 
