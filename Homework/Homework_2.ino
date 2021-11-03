@@ -7,6 +7,10 @@ const int ledYellowCar = 11;
 const int ledRedCar = 12;
 const int intervalBuzzSlow = 1000;
 const int intervalBuzzFast = 500;
+const int periodStart = 10000;
+const int periodYellow = 3000;
+const unsigned long slowDuration = 10;
+const unsigned long fastDuration = 125;
 
 int lastDebounceTimer = 0;
 int debounceInterval = 50;
@@ -18,6 +22,7 @@ unsigned int lastChangedSlow;
 unsigned int elapsedTimeSlow;
 unsigned int lastChangedFast;
 unsigned int elapsedTimeFast;
+unsigned long start = 0;
 
 bool buttonState = LOW;
 bool buzzerState = LOW;
@@ -39,13 +44,13 @@ void setup()
   pinMode(ledYellowCar, OUTPUT);
   pinMode(ledRedCar, OUTPUT);
   Serial.begin(9600);
+
+  digitalWrite(ledRed, redLedState);
+  digitalWrite(ledGreenCar, greenLedCarState);
 }
 
 void loop() 
 {
-  digitalWrite(ledRed, redLedState);
-  digitalWrite(ledGreenCar, greenLedCarState);
-  
   reading = digitalRead(pushButton);
 
   if (reading != lastReading)
@@ -58,15 +63,24 @@ void loop()
     if (reading != buttonState)
     {
       buttonState = reading;
-      if (buttonState == HIGH)
+      if (buttonState == LOW)
       {
-        delay(10000);
+        start = millis();
+        while(millis() - start < periodStart)
+        {
+          // We wait for the period mentioned.
+        }
         
         greenLedCarState = !greenLedCarState;
         digitalWrite(ledGreenCar, greenLedCarState);
         yellowLedCarState = !yellowLedCarState;
         digitalWrite(ledYellowCar, yellowLedCarState);
-        delay(3000);  
+        
+        start = millis();
+        while(millis() - start < periodYellow)
+        {
+          // We wait for the period mentioned.
+        }  
         
         yellowLedCarState = !yellowLedCarState; 
         digitalWrite(ledYellowCar, yellowLedCarState);
@@ -79,12 +93,12 @@ void loop()
 
         timerSlow = 0;
         lastChangedSlow = 0;
-        while (timerSlow <= 10)
+        while (timerSlow <= 10000 / intervalBuzzSlow) // We want a 10 seconds stage.
         {
           elapsedTimeSlow = millis();
           if (elapsedTimeSlow - lastChangedSlow >= intervalBuzzSlow)
           {
-            tone(buzzer, buzzerTone, 500);
+            tone(buzzer, buzzerTone, slowDuration);
             lastChangedSlow = elapsedTimeSlow;
             timerSlow++;
           }
@@ -92,14 +106,14 @@ void loop()
 
         timerFast = 0;
         lastChangedFast = 0;
-        while (timerFast <= 10)
+        while (timerFast <= 5000 / intervalBuzzFast)  // We want a 5 seconds stage.
         {
           elapsedTimeFast = millis();
           if (elapsedTimeFast - lastChangedFast >= intervalBuzzFast)
           {
             greenLedState = !greenLedState;
             digitalWrite(ledGreen, greenLedState);
-            tone(buzzer, buzzerTone, 125);
+            tone(buzzer, buzzerTone, fastDuration);
             lastChangedFast = elapsedTimeFast;
             timerFast++; 
           }
@@ -118,4 +132,3 @@ void loop()
   }
   lastReading = reading;
 }
-  
