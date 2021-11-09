@@ -6,7 +6,7 @@ My repository with all the code from my homework and projects from my university
   - [Lab 3](/Lab%203)
 - Homework 
   - <details>
-    <summary>Homework 1</summary>
+    <summary>Homework 1-Controlling an RGB led with 3 potentiometers</summary>
     <ol>
       <li> <b>Code:</b> <a href="/Homework/Homework_1.ino">Homework_1.ino</a></li>
       <li> <b>Technical Task:</b> Use a separate potentiometer in controlling each of the color of the RGB led. The control must be done with digital electronics (aka you must read the value of the potentiometer with Arduino, and write a mapped value to each of the pins connected to the led.</li>
@@ -19,7 +19,7 @@ My repository with all the code from my homework and projects from my university
     </details>
 
   - <details>
-    <summary>Homework 2</summary>
+    <summary>Homework 2-Traffic lights</summary>
     <ol>
       <li> <b>Code:</b> <a href="/Homework/Homework_2.ino">Homework_2.ino</a></li>
       <li> <b>Technical Task:</b> Building the traffic lights for a crosswalk. You will use 2 LEDs to represent the traffic lights for people (red and green) and 3 LEDs to represent the traffic lights for cars (red, yellow and green).</li>
