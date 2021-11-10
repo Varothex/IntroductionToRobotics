@@ -2,8 +2,9 @@
 My repository with all the code from my homework and projects from my university robotics course. 
 
 - Lab
-  - [Lab 2](/Lab%202)
-  - [Lab 3](/Lab%203)
+  - [Lab 2](/Lab/Lab%202)
+  - [Lab 3](/Lab/Lab%203)
+  - [Lab 4](/Lab/Lab%204)
 - Homework 
   - <details>
     <summary>Homework 1-Controlling an RGB led with 3 potentiometers</summary>
