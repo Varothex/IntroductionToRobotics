@@ -65,7 +65,7 @@ void loop()
   analogWrite(buzzPin, val);
   
   val = constrain(val, 0, 10);
-//  Serial.println(val);
+  Serial.println(val);
   if (0.0 <= val and val <= 1.0)               
   {  
     displayNumber(0);   
@@ -94,6 +94,18 @@ void loop()
   {
     displayNumber(6);    
   }  
+  if (7.0 <= val and val <= 8.0)               
+  {
+    displayNumber(7);    
+  } 
+  if (8.0 <= val and val <= 9.0)               
+  {
+    displayNumber(8);    
+  } 
+  if (9.0 <= val)               
+  {
+    displayNumber(9);    
+  }
   
   val = map(val, 0, 10, 0, 255);
   analogWrite(pinLed, val);
