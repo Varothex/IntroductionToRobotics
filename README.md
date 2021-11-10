@@ -31,4 +31,18 @@ My repository with all the code from my homework and projects from my university
     ![signal-2021-11-03-232115_001](https://user-images.githubusercontent.com/61534490/140195230-48a50108-2552-40d6-98bb-9c022f5307b9.jpeg)
     ![signal-2021-11-03-232115_002](https://user-images.githubusercontent.com/61534490/140195446-c2c7a526-4653-48e8-9d5e-be4b0842340c.jpeg)
     </details>
+    
+   - <details>
+    <summary>Homework 3: EMF Detector</summary>
+    <ol>
+      <li> <b>Code:</b> <a href="/Homework/Homework_2.ino">Homework_2.ino</a></li>
+      <li> <b>Technical Task:</b> Buil a Ghost Detector using a buzzer and a 7-segment display (or a led bar / or 8 leds
+in a row that simulate a led bar).</li>
+      <li> <b>Coding task:</b> It should print the value on the 7-segment display (or light the led bar) and should make a sound based on the intensity. The catch: it’s really easy, but one of the mistakes you can do is not calibrate for the interval on the values you are going to get.</li>
+      <li> <b>Video:</b> https://youtu.be/UK0OZxlMHN4</li>
+    </ol>
+  
+![signal-2021-11-10-234530_001](https://user-images.githubusercontent.com/61534490/141199099-ef416178-ee76-4572-9532-8a7cdbe326c0.jpeg)
+![signal-2021-11-10-234530_002](https://user-images.githubusercontent.com/61534490/141199108-9a687aa3-bfd1-40a0-bf3c-69b23f14fedc.jpeg)
+    </details>
 
