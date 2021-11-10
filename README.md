@@ -32,7 +32,7 @@ My repository with all the code from my homework and projects from my university
     ![signal-2021-11-03-232115_002](https://user-images.githubusercontent.com/61534490/140195446-c2c7a526-4653-48e8-9d5e-be4b0842340c.jpeg)
     </details>
     
-   - <details>
+  - <details>
     <summary>Homework 3: EMF Detector</summary>
     <ol>
       <li> <b>Code:</b> <a href="/Homework/Homework_2.ino">Homework_2.ino</a></li>
