@@ -65,7 +65,6 @@ void loop()
   analogWrite(buzzPin, val);
   
   val = constrain(val, 0, 10);
-  Serial.println(val);
   if (0.0 <= val and val <= 1.0)               
   {  
     displayNumber(0);   
