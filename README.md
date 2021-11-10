@@ -42,7 +42,7 @@ in a row that simulate a led bar).</li>
       <li> <b>Video:</b> https://youtu.be/UK0OZxlMHN4</li>
     </ol>
   
-![signal-2021-11-10-234530_001](https://user-images.githubusercontent.com/61534490/141199099-ef416178-ee76-4572-9532-8a7cdbe326c0.jpeg)
-![signal-2021-11-10-234530_002](https://user-images.githubusercontent.com/61534490/141199108-9a687aa3-bfd1-40a0-bf3c-69b23f14fedc.jpeg)
+    ![signal-2021-11-10-234530_001](https://user-images.githubusercontent.com/61534490/141199099-ef416178-ee76-4572-9532-8a7cdbe326c0.jpeg)
+    ![signal-2021-11-10-234530_002](https://user-images.githubusercontent.com/61534490/141199108-9a687aa3-bfd1-40a0-bf3c-69b23f14fedc.jpeg)
     </details>
 
