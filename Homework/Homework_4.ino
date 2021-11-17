@@ -133,7 +133,7 @@ void loop()
     xValue = analogRead(pinX);
     digitToShow = number[digitIndex];
 
-    if (xValue < downThreshold && joyMoved == false) 
+    if (xValue < downThreshold && joyMoved == false) // pointing the joystick down will decrement the digit
     {
       if (digitToShow > 0) 
       {
@@ -146,7 +146,7 @@ void loop()
       joyMoved = true;
     }
 
-    if (xValue > upThreshold && joyMoved == false) 
+    if (xValue > upThreshold && joyMoved == false) // pointing the joystick up will increment the digit
     {
       if (digitToShow < 9) 
       {
@@ -168,7 +168,7 @@ void loop()
   }
 }
 
-void changeSwState() 
+void changeSwState() // the blinking dot indicating the current digit that we are about to edit
 {
   static unsigned long lastInterruptTime = 0;
   unsigned long interruptTime = millis();
