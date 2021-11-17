@@ -48,6 +48,13 @@ My repository with all the code from my homework and projects from my university
   - <details>
     <summary>Homework 4: 4-digit 7-segment with Joystick</summary>
     <ol>
+      <li> <b>Code:</b> <a href="/Homework/Homework_4.ino">Homework_4.ino</a></li>
+      <li> <b>Technical Task:</b> The current homework involves using a joystick in setting the values on each digit of a 4-digit 7-segment display connected to a shift register 74hc595. </li>
+      <li> <b>Coding task:</b> First state: you can use a joystick axis to cycle through the 4 digits; using the other axis does nothing. A blinking decimal point shows the current digit position. When pressing the button, you lock in on the selected digit and enter the second state. In this state, the decimal point stays always on, no longer blinking and you can no longer use the axis to cycle through the 4 digits. Instead, using the other axis, you can increment on decrement the number on the current digit. Pressing the button again returns you to the previous state. For bonus, save the last value in eeprom and load it when starting arduino. Also, keep in mind that when changing the number, you must increment it for each joystick movement - it should not work continuosly increment if you keep the joystick in one position. </li>
+      <li> <b>Video:</b> </li>
     </ol>
+  
+    ![signal-2021-11-17-132059_002](https://user-images.githubusercontent.com/61534490/142274505-84b0242a-cf51-47a0-b8f9-785736a2746b.jpeg)
+    ![signal-2021-11-17-132059_003](https://user-images.githubusercontent.com/61534490/142274513-304c49fa-e5e8-4769-b39b-0efd848540b7.jpeg)
     </details>
 
