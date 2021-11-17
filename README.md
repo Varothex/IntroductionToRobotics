@@ -46,7 +46,7 @@ My repository with all the code from my homework and projects from my university
     </details>
     
   - <details>
-    <summary>Homework 4: 4-digit 7-segment with Joystick</summary>
+    <summary>Homework 4: 4 digit 7-segment with Joystick</summary>
     <ol>
       <li> <b>Code:</b> <a href="/Homework/Homework_4.ino">Homework_4.ino</a></li>
       <li> <b>Technical Task:</b> The current homework involves using a joystick in setting the values on each digit of a 4-digit 7-segment display connected to a shift register 74hc595. </li>
