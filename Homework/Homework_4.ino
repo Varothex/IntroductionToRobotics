@@ -4,8 +4,6 @@ const int pinSW = 3;
 const int pinX = A0;
 const int pinY = A1;
 
-const unsigned long debounceInterval = 200;
-
 const int dataPin = 12;
 const int latchPin = 11;
 const int clockPin = 10;
@@ -16,10 +14,29 @@ const int segD3 = 5;
 const int segD4 = 4;
 
 const int maxAnalogRead = 1023;
-
-int displayDigits[] = {segD1, segD2, segD3, segD4};
+const unsigned long debounceInterval = 200;
 
 const int displayCount = 4;
+int displayDigits[displayCount] = {segD1, segD2, segD3, segD4};
+int number[displayCount] = {0, 0, 0, 0};
+
+int digitIndex;
+int digitToShow;
+
+bool dpState;
+const int dpInterval = 500;
+unsigned long lastDpFlick = 0;
+
+bool swState = HIGH;
+bool joyMoved = false;
+
+int xValue = 0;
+int yValue = 0;
+
+int rightThreshold = 680;
+int leftThreshold = 340;
+int downThreshold = 340;
+int upThreshold = 680;
 
 const byte byteMask = 0xFF;
 const int byteLength = 8;
@@ -45,32 +62,8 @@ int digitArray[16] =
   B10001110  // F
 };
 
-const int numberSize = 4;
-int number[numberSize];
-
-int digitIndex;
-bool dpState;
-
-const int dpInterval = 500;
-unsigned long lastDpFlick = 0;
-
-bool swState = HIGH;
-
-int xValue = 0;
-int yValue = 0;
-
-int rightThreshold = 680;
-int leftThreshold = 340;
-
-int downThreshold = 340;
-int upThreshold = 680;
-
-bool joyMoved = false;
-
-
 void setup() 
 {
-
   pinMode(pinSW, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(pinSW), changeSwState, FALLING);
 
@@ -83,7 +76,6 @@ void setup()
     pinMode(displayDigits[i], OUTPUT);
     digitalWrite(displayDigits[i], LOW);
   }
-
   setCurrentNumber(readEEPROM());
 
   Serial.begin(9600);
@@ -98,9 +90,9 @@ void loop()
   {
     yValue = analogRead(pinY); // the values are between 0 (left) and 1023 (right)
 
-    if (yValue > rightThreshold && joyMoved == false) // we go right
+    if (yValue > rightThreshold && !joyMoved) // we go right
     {
-      if (digitIndex + 1 < numberSize) 
+      if (digitIndex + 1 < displayCount) 
       {
         digitIndex++;
       }
@@ -111,7 +103,7 @@ void loop()
       joyMoved = true;
     }
 
-    if (yValue < leftThreshold && joyMoved == false) // we go left
+    if (yValue < leftThreshold && !joyMoved) // we go left
     {
         if (digitIndex > 0) 
         {
@@ -119,7 +111,7 @@ void loop()
         }
          else 
         {
-          digitIndex = numberSize - 1;
+          digitIndex = displayCount - 1;
         }
         joyMoved = true;
     }
@@ -137,32 +129,32 @@ void loop()
   }
   else // when we press the button, we can no longer change the digit, but we can now change the number
   {
+    dpState = HIGH;
     xValue = analogRead(pinX);
-    
-    int newDigit = number[digitIndex];
+    digitToShow = number[digitIndex];
 
     if (xValue < downThreshold && joyMoved == false) 
     {
-      if (newDigit > 0) 
+      if (digitToShow > 0) 
       {
-        newDigit--;
+        digitToShow--;
       }
       else 
       {
-        newDigit = 9;
+        digitToShow = 9;
       }
       joyMoved = true;
     }
 
     if (xValue > upThreshold && joyMoved == false) 
     {
-      if (newDigit < 9) 
+      if (digitToShow < 9) 
       {
-        newDigit++;
+        digitToShow++;
       }
       else 
       {
-        newDigit = 0;
+        digitToShow = 0;
       }
       joyMoved = true;
     }
@@ -172,8 +164,7 @@ void loop()
       joyMoved = false;
     }
 
-    number[digitIndex] = newDigit;
-    dpState = HIGH;
+    number[digitIndex] = digitToShow;
   }
 }
 
@@ -192,9 +183,11 @@ void changeSwState()
 
 void writeNumber() 
 {
-  for (int i = 0; i < numberSize; i++) 
+  for (int i = 0; i < displayCount; i++) 
+  // for (int i = displayCount-1; i >= 0; i--)
   {
     showDigit(displayCount - i - 1);
+    // showDigit(displayCount);
     if (i == digitIndex) 
     {
       writeReg(digitArray[number[i]] ^ dpState);
@@ -209,7 +202,7 @@ void writeNumber()
 
 void showDigit(int displayNumber) 
 {
-  for (int i = 0; i < 4; i++) 
+  for (int i = 0; i < displayCount; i++) 
   {
     digitalWrite(displayDigits[i], HIGH);
   }
@@ -229,7 +222,7 @@ void writeReg(int digit)
 int getCurrentNumber() 
 {
   int answer = 0;
-  for (int i = 0; i < numberSize; i++) 
+  for (int i = 0; i < displayCount; i++) 
   {
     answer = answer * 10 + number[i];
   }
@@ -238,7 +231,7 @@ int getCurrentNumber()
 
 void setCurrentNumber(int currentNumber) 
 {
-  for (int i = numberSize - 1; i >= 0; i--) 
+  for (int i = displayCount - 1; i >= 0; i--) 
   {
     number[i] = currentNumber % 10;
     currentNumber /= 10;
@@ -261,4 +254,3 @@ int readEEPROM()
   answer = secondByte;
   return (answer << byteLength) | firstByte;
 }
-
