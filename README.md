@@ -46,14 +46,8 @@ My repository with all the code from my homework and projects from my university
     </details>
     
   - <details>
-   <summary>Homework 3: EMF Detector</summary>
-   <ol>
-     <li> <b>Code:</b> <a href="/Homework/Homework_3.ino">Homework_3.ino</a></li>
-     <li> <b>Technical Task:</b> Buil a Ghost Detector using a buzzer and a 7-segment display (or a led bar / or 8 leds in a row that simulate a led bar).</li>
-     <li> <b>Coding task:</b> It should print the value on the 7-segment display (or light the led bar) and should make a sound based on the intensity. The catch: it’s really easy, but one of the mistakes you can do is not calibrate for the interval on the values you are going to get.</li>
-     <li> <b>Video:</b> https://youtu.be/UK0OZxlMHN4</li>
-   </ol>
-  
-
+    <summary>Homework 4: </summary>
+    <ol>
+    </ol>
     </details>
 
