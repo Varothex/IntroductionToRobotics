@@ -46,7 +46,7 @@ My repository with all the code from my homework and projects from my university
     </details>
     
   - <details>
-    <summary>Homework 4: </summary>
+    <summary>Homework 4: 4 digit 7 segment with Joystick</summary>
     <ol>
     </ol>
     </details>
