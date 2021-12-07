@@ -12,7 +12,7 @@ My repository with all the code from my homework and projects from my university
       <li> <b>Code:</b> <a href="/Homework/Homework_1.ino">Homework_1.ino</a></li>
       <li> <b>Technical Task:</b> Use a separate potentiometer in controlling each of the color of the RGB led. The control must be done with digital electronics (aka you must read the value of the potentiometer with Arduino, and write a mapped value to each of the pins connected to the led.</li>
       <li> <b>Coding task:</b> Coding style is of utmost importance. You must have a perfectly clean code in order to receive the maximum grade. Keep in mind that magic numbers are not accepted, although you might see them in the lab (as a trade-off for speed). Remember to be consistent in your style, check the style guide and the provided style document and use correct spacing.</li>
-      <li> <b>Video:</b><a href="https://youtu.be/HP5m1wVidqQ" target="_blank">example</a></li>
+      <li> <b>Video:</b><a href="https://youtu.be/HP5m1wVidqQ" target="_blank"> A video demonstration. </a></li>
     </ol>
     
     ![signal-2021-10-26-223956_001](https://user-images.githubusercontent.com/61534490/138949839-e7d2ab05-39b8-4c67-be94-33af6387f5c7.jpeg) 
